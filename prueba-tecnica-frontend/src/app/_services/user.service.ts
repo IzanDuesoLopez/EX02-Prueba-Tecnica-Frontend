@@ -11,7 +11,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getAuthenticationToken(): Observable<any> {
-    return this.http.get(API_URL, {responseType: 'text'});
-  }
+  // getPublicContent(): Observable<any> {
+  //   return this.http.get()
+  // }
 }

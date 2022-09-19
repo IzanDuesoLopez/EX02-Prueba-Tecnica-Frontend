@@ -9,6 +9,7 @@ import { ListaPeliculasComponent } from './components/lista-peliculas/lista-peli
 import { ListaSeriesTvComponent } from './components/lista-series-tv/lista-series-tv.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 //import {authInterceptorProviders} from './_hel'
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     ListaPeliculasComponent,
-    ListaSeriesTvComponent
+    ListaSeriesTvComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
