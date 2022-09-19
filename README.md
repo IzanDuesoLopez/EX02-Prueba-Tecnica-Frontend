@@ -1,8 +1,5 @@
-# PruebaTecnicaFrontend
-
-```
-# Link: 
+# Link:  
 
 ### Username: izandueso  
 ### Password: izan200  
-```
+
