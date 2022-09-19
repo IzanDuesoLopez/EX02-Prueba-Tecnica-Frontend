@@ -1,1 +1,25 @@
-<p>lista-series-tv works!</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <input type="text" class="form-control mt-4" placeholder="Buscar por titulo o descripción"
+          [(ngModel)]="title" />
+      </div>
+      <h1 class="mt-4">Positions list</h1>
+      <ng-container *ngFor="let pos of series_datos; let j = index;" [class.active]="j == currentIndex">
+        <div class="card mb-4 posicionar" style="width: 18rem;"
+          *ngIf="pos.name == title || (pos.name | lowercase).includes((title | lowercase)) || (pos.overview | lowercase).includes((title | lowercase))">
+          <div class="card-body">
+            <h5 class="card-title mt-3">{{pos.name}}</h5>
+            <h6 class="card-text">Titulo Original: {{pos.original_name}}</h6>
+            <p class="card-text">Fecha: {{pos.first_air_date}}</p>
+            <p class="card-text">{{pos.overview}}</p>
+            <p class="card-text">Género: {{pos.genre_ids}}</p>
+            <p class="card-text">Número de votos: {{pos.vote_count}}</p>
+            <p class="card-text">Nota media: {{pos.vote_average}}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

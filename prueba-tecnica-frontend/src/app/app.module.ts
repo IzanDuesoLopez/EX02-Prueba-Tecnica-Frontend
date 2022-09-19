@@ -10,6 +10,9 @@ import { ListaSeriesTvComponent } from './components/lista-series-tv/lista-serie
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
+import { PeliculaDetailsComponent } from './components/pelicula-details/pelicula-details.component';
+import { SerieDetailsComponent } from './components/serie-details/serie-details.component';
 //import {authInterceptorProviders} from './_hel'
 
 @NgModule({
@@ -19,7 +22,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     ListaPeliculasComponent,
     ListaSeriesTvComponent,
-    NavbarComponent
+    NavbarComponent,
+    BuscarComponent,
+    PeliculaDetailsComponent,
+    SerieDetailsComponent
   ],
   imports: [
     BrowserModule,

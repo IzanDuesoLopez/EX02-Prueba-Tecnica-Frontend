@@ -11,7 +11,4 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  // getPublicContent(): Observable<any> {
-  //   return this.http.get()
-  // }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/_services/auth.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
@@ -20,11 +21,13 @@ export class LoginComponent implements OnInit {
   resultados:any;
   token_final: any;
 
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
     if(this.tokenStorage.getToken()){
       this.isLoggedIn = true;
+    } else {
+      this.onSubmit();
     }
   }
 
@@ -50,6 +53,15 @@ export class LoginComponent implements OnInit {
     this.authService.login(username, password, this.token_final).subscribe(
       data => {
         this.tokenStorage.saveUser(data);
+
+        this.isLoginFailed = false;
+        this.isLoggedIn = true;
+        this.reloadPage();
+        this.router.navigate(['/home'])
+      },
+      error => {
+        this.isLoginFailed = true;
+        console.log(error);
       }
     )
   }

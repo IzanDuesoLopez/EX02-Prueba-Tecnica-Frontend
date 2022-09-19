@@ -46,14 +46,13 @@ export class NavbarComponent implements OnInit {
       this.username = user.username;
 
     }
-    // else if (!this.isLoggedIn) {
-    //   this.route.navigate(['/login']);
-    // }
   }
 
   logout(): void {
     this.tokenStorageService.signOut();
     window.location.reload();
+    this.route.navigate(['/login']);
+
   }
 
 }
