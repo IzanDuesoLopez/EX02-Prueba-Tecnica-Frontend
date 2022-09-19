@@ -18,5 +18,7 @@ GET /list/{list_id}
 GET /tv/popular  
 ```
 ![image](https://user-images.githubusercontent.com/108723551/191007176-f51a0018-9d46-4a0c-94f0-2a81e6e5be6c.png)  
+![image](https://user-images.githubusercontent.com/108723551/191007337-23be719c-57b1-4d5f-9423-893fd5ea07b4.png)  
+
  
 
